@@ -1,3 +1,4 @@
+TASK 1 :
 bhagya@Tanishka2020:~$ touch myfile.txt
 bhagya@Tanishka2020:~$ ls -l myfile.txt
 -rw-r--r-- 1 bhagya bhagya 0 Jun  9 08:28 myfile.txt
