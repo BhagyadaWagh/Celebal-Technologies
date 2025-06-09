@@ -114,3 +114,52 @@ userdel: bhagyada mail spool (/var/mail/bhagyada) not found
 bhagya@Tanishka2020:~$ sudo groupdel devgroup
 bhagya@Tanishka2020:~$ sudo userdel -r bhagyada
 userdel: user 'bhagyada' does not exist
+
+TASK 5 :
+bhagya@Tanishka2020:~$ git config --global user.name "Bhagyada"
+bhagya@Tanishka2020:~$ git config --global user.email "bhagyadasw19@gmail.com"
+bhagya@Tanishka2020:~$ git config --list
+user.name=Bhagyada
+user.email=bhagyadasw19@gmail.com
+bhagya@Tanishka2020:~$ mkdir myproject
+bhagya@Tanishka2020:~$ cd myproject
+bhagya@Tanishka2020:~/myproject$ git init
+hint: Using 'master' as the name for the initial branch. This default branch name
+hint: is subject to change. To configure the initial branch name to use in all
+hint: of your new repositories, which will suppress this warning, call:
+hint:
+hint:   git config --global init.defaultBranch <name>
+hint:
+hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+hint: 'development'. The just-created branch can be renamed via this command:
+hint:
+hint:   git branch -m <name>
+Initialized empty Git repository in /home/bhagya/myproject/.git/
+bhagya@Tanishka2020:~/myproject$ git status
+On branch master
+
+No commits yet
+
+nothing to commit (create/copy files and use "git add" to track)
+bhagya@Tanishka2020:~/myproject$ git add file.txt
+fatal: pathspec 'file.txt' did not match any files
+bhagya@Tanishka2020:~/myproject$ git add file2.txt
+fatal: pathspec 'file2.txt' did not match any files
+bhagya@Tanishka2020:~/myproject$ git add .
+bhagya@Tanishka2020:~/myproject$ git commit -m "My First Commit"
+On branch master
+
+Initial commit
+
+nothing to commit (create/copy files and use "git add" to track)
+bhagya@Tanishka2020:~/myproject$ git remote add origin https://github.com/BhagyadaWagh/Celebal-Technologies
+bhagya@Tanishka2020:~/myproject$ git branch -M main
+bhagya@Tanishka2020:~/myproject$ git pull origin main
+remote: Enumerating objects: 18, done.
+remote: Counting objects: 100% (18/18), done.
+remote: Compressing objects: 100% (16/16), done.
+remote: Total 18 (delta 4), reused 0 (delta 0), pack-reused 0 (from 0)
+Unpacking objects: 100% (18/18), 6.30 KiB | 179.00 KiB/s, done.
+From https://github.com/BhagyadaWagh/Celebal-Technologies
+ * branch            main       -> FETCH_HEAD
+ * [new branch]      main       -> origin/main
