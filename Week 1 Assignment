@@ -93,3 +93,24 @@ drwxr-xr-x 2 bhagya bhagya 4.0K Jun  9 10:03 Projects
 -rwxr-xr-x 1 bhagya bhagya    0 Jun  9 09:53 myfile.txt
 -rw-r--r-- 1 bhagya bhagya    0 Jun  9 10:00 renamed_file.txt
 -rw-r--r-- 1 bhagya bhagya    0 Jun  9 09:15 test.txt
+
+TASK 4 :
+bhagya@Tanishka2020:~$ sudo useradd -m bhagyada
+bhagya@Tanishka2020:~$ sudo passwd bhagyada
+New password:
+Retype new password:
+passwd: password updated successfully
+bhagya@Tanishka2020:~$ sudo groupadd devgroup
+bhagya@Tanishka2020:~$ sudo usermod -aG devgroup bhagyada
+bhagya@Tanishka2020:~$ groups bhagyada
+bhagyada : bhagyada devgroup
+bhagya@Tanishka2020:~$ sudo mkdir /opt/devdata
+bhagya@Tanishka2020:~$ sudo chown bhagyada:devgroup /opt/devdata
+bhagya@Tanishka2020:~$ sudo chmod 770 /opt/devdata
+bhagya@Tanishka2020:~$ id bhagyada
+uid=1001(bhagyada) gid=1001(bhagyada) groups=1001(bhagyada),1002(devgroup)
+bhagya@Tanishka2020:~$ sudo userdel -r bhagyada
+userdel: bhagyada mail spool (/var/mail/bhagyada) not found
+bhagya@Tanishka2020:~$ sudo groupdel devgroup
+bhagya@Tanishka2020:~$ sudo userdel -r bhagyada
+userdel: user 'bhagyada' does not exist
