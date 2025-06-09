@@ -1,0 +1,20 @@
+/////     TASK 2 :     /////
+bhagya@Tanishka2020:~$ ls -l
+total 0
+-rwxr-x--- 1 bhagya bhagya 0 Jun  9 08:31 example.txt
+-rwxr-xr-x 1 bhagya bhagya 0 Jun  9 08:28 myfile.txt
+-rw-r--r-- 1 bhagya bhagya 0 Jun  9 09:15 test.txt
+bhagya@Tanishka2020:~$ mkdir demo
+bhagya@Tanishka2020:~$ cd demo
+bhagya@Tanishka2020:~/demo$ touch test.txt
+bhagya@Tanishka2020:~/demo$ touch myfile.txt
+bhagya@Tanishka2020:~/demo$ ls
+myfile.txt  test.txt
+bhagya@Tanishka2020:~/demo$ cd ..
+bhagya@Tanishka2020:~$ rm -r demo
+bhagya@Tanishka2020:~$ ls -l
+total 0
+-rwxr-x--- 1 bhagya bhagya 0 Jun  9 08:31 example.txt
+-rwxr-xr-x 1 bhagya bhagya 0 Jun  9 08:28 myfile.txt
+-rw-r--r-- 1 bhagya bhagya 0 Jun  9 09:15 test.txt
+

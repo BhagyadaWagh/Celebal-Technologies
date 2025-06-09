@@ -1,0 +1,66 @@
+/////     TASK 8 :     /////
+bhagya@Tanishka2020:~$ mkdir -p ~/test-project
+bhagya@Tanishka2020:~$ cd ~/test-project
+bhagya@Tanishka2020:~/test-project$ git init
+hint: Using 'master' as the name for the initial branch. This default branch name
+hint: is subject to change. To configure the initial branch name to use in all
+hint: of your new repositories, which will suppress this warning, call:
+hint:
+hint:   git config --global init.defaultBranch <name>
+hint:
+hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+hint: 'development'. The just-created branch can be renamed via this command:
+hint:
+hint:   git branch -m <name>
+Initialized empty Git repository in /home/bhagya/test-project/.git/
+bhagya@Tanishka2020:~/test-project$ git remote add origin ~/git-remote/testrepo.git
+bhagya@Tanishka2020:~/test-project$ echo "Hello Git" > file1.txt
+bhagya@Tanishka2020:~/test-project$ git add file1.txt
+bhagya@Tanishka2020:~/test-project$ git commit -m "Initial commit with file1"
+[master (root-commit) 4ce4196] Initial commit with file1
+ 1 file changed, 1 insertion(+)
+ create mode 100644 file1.txt
+bhagya@Tanishka2020:~/test-project$ git push origin master
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 230 bytes | 230.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To /home/bhagya/git-remote/testrepo.git
+ * [new branch]      master -> master
+bhagya@Tanishka2020:~/test-project$ git reset --soft HEAD~1
+fatal: ambiguous argument 'HEAD~1': unknown revision or path not in the working tree.
+Use '--' to separate paths from revisions, like this:
+'git <command> [<revision>...] -- [<file>...]'
+bhagya@Tanishka2020:~/test-project$ git restore --staged file1.txt
+bhagya@Tanishka2020:~/test-project$ git rm file1.txt
+rm 'file1.txt'
+bhagya@Tanishka2020:~/test-project$ git commit -m "Undo file1"
+[master c5c2776] Undo file1
+ 1 file changed, 1 deletion(-)
+ delete mode 100644 file1.txt
+bhagya@Tanishka2020:~/test-project$ git push origin master --force
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Writing objects: 100% (2/2), 194 bytes | 48.00 KiB/s, done.
+Total 2 (delta 0), reused 0 (delta 0), pack-reused 0
+To /home/bhagya/git-remote/testrepo.git
+   4ce4196..c5c2776  master -> master
+bhagya@Tanishka2020:~/test-project$ git reset --hard HEAD~1
+HEAD is now at 4ce4196 Initial commit with file1
+bhagya@Tanishka2020:~/test-project$ git push origin master --force
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
+To /home/bhagya/git-remote/testrepo.git
+ + c5c2776...4ce4196 master -> master (forced update)
+bhagya@Tanishka2020:~/test-project$ git rm file1.txt
+rm 'file1.txt'
+bhagya@Tanishka2020:~/test-project$ git commit -m "Remove file1.txt"
+[master e84575b] Remove file1.txt
+ 1 file changed, 1 deletion(-)
+ delete mode 100644 file1.txt
+bhagya@Tanishka2020:~/test-project$ git push origin master
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Writing objects: 100% (2/2), 199 bytes | 199.00 KiB/s, done.
+Total 2 (delta 0), reused 0 (delta 0), pack-reused 0
+To /home/bhagya/git-remote/testrepo.git
+   4ce4196..e84575b  master -> master

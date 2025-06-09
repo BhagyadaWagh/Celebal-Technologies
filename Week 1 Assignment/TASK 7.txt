@@ -1,0 +1,33 @@
+/////     TASK 7 :     /////
+bhagya@Tanishka2020:~/my-local-project$ git checkout -b feature-branch
+Switched to a new branch 'feature-branch'
+bhagya@Tanishka2020:~/my-local-project$ echo "This is a new feature" > feature.txt
+bhagya@Tanishka2020:~/my-local-project$ git add feature.txt
+bhagya@Tanishka2020:~/my-local-project$ git commit -m "Added feature.txt in feature-branch"
+[feature-branch e06a8ef] Added feature.txt in feature-branch
+ 1 file changed, 1 insertion(+)
+ create mode 100644 feature.txt
+bhagya@Tanishka2020:~/my-local-project$ git push origin feature-branch
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 308 bytes | 102.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To /home/bhagya/git-remote/myproject.git
+ * [new branch]      feature-branch -> feature-branch
+bhagya@Tanishka2020:~/my-local-project$ git checkout master
+Switched to branch 'master'
+bhagya@Tanishka2020:~/my-local-project$ git merge feature-branch
+Updating 19f23dd..e06a8ef
+Fast-forward
+ feature.txt | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 feature.txt
+bhagya@Tanishka2020:~/my-local-project$ git checkout master
+Already on 'master'
+bhagya@Tanishka2020:~/my-local-project$ git pull origin master
+From /home/bhagya/git-remote/myproject
+ * branch            master     -> FETCH_HEAD
+Already up to date.
+
