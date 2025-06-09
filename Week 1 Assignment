@@ -39,4 +39,57 @@ total 0
 -rwxr-x--- 1 bhagya bhagya 0 Jun  9 08:31 example.txt
 -rwxr-xr-x 1 bhagya bhagya 0 Jun  9 08:28 myfile.txt
 -rw-r--r-- 1 bhagya bhagya 0 Jun  9 09:15 test.txt
-bhagya@Tanishka2020:~$
+
+TASK 3 :
+bhagya@Tanishka2020:~$ touch myfile.txt
+bhagya@Tanishka2020:~$ touch demo.txt
+bhagya@Tanishka2020:~$ mkdir PracticeLinux
+mkdir: cannot create directory ‘PracticeLinux’: File exists
+bhagya@Tanishka2020:~$ rm -r PracticeLinux
+bhagya@Tanishka2020:~$ mkdir PracticeLinux
+bhagya@Tanishka2020:~$ cd PracticeLinux
+bhagya@Tanishka2020:~/PracticeLinux$ cd ..
+bhagya@Tanishka2020:~$ mkdir Projects Documents Downloads
+mkdir: cannot create directory ‘Projects’: File exists
+mkdir: cannot create directory ‘Documents’: File exists
+mkdir: cannot create directory ‘Downloads’: File exists
+bhagya@Tanishka2020:~$ touch file1.txt file2.txt
+bhagya@Tanishka2020:~$ cd Projects
+bhagya@Tanishka2020:~/Projects$ touch project1.txt
+bhagya@Tanishka2020:~/Projects$ cd ..
+bhagya@Tanishka2020:~$ ls
+Documents  PracticeLinux  demo.txt     file1.txt  myfile.txt
+Downloads  Projects       example.txt  file2.txt  test.txt
+bhagya@Tanishka2020:~$ cd Documents
+bhagya@Tanishka2020:~/Documents$ cd ..
+bhagya@Tanishka2020:~$ ls -a
+.              .bashrc      .profile       Projects     file2.txt
+..             .cache       Documents      demo.txt     myfile.txt
+.bash_history  .landscape   Downloads      example.txt  test.txt
+.bash_logout   .motd_shown  PracticeLinux  file1.txt
+bhagya@Tanishka2020:~$ ls -lh
+total 16K
+drwxr-xr-x 2 bhagya bhagya 4.0K Jun  9 09:44 Documents
+drwxr-xr-x 2 bhagya bhagya 4.0K Jun  9 09:42 Downloads
+drwxr-xr-x 2 bhagya bhagya 4.0K Jun  9 09:55 PracticeLinux
+drwxr-xr-x 2 bhagya bhagya 4.0K Jun  9 09:43 Projects
+-rw-r--r-- 1 bhagya bhagya    0 Jun  9 09:53 demo.txt
+-rwxr-x--- 1 bhagya bhagya    0 Jun  9 08:31 example.txt
+-rw-r--r-- 1 bhagya bhagya    0 Jun  9 10:00 file1.txt
+-rw-r--r-- 1 bhagya bhagya    0 Jun  9 10:00 file2.txt
+-rwxr-xr-x 1 bhagya bhagya    0 Jun  9 09:53 myfile.txt
+-rw-r--r-- 1 bhagya bhagya    0 Jun  9 09:15 test.txt
+bhagya@Tanishka2020:~$ mv file1.txt Documents
+bhagya@Tanishka2020:~$ mv Projects/project1.txt Downloads
+bhagya@Tanishka2020:~$ mv file2.txt renamed_file.txt
+bhagya@Tanishka2020:~$ ls -lh
+total 16K
+drwxr-xr-x 2 bhagya bhagya 4.0K Jun  9 10:02 Documents
+drwxr-xr-x 2 bhagya bhagya 4.0K Jun  9 10:03 Downloads
+drwxr-xr-x 2 bhagya bhagya 4.0K Jun  9 09:55 PracticeLinux
+drwxr-xr-x 2 bhagya bhagya 4.0K Jun  9 10:03 Projects
+-rw-r--r-- 1 bhagya bhagya    0 Jun  9 09:53 demo.txt
+-rwxr-x--- 1 bhagya bhagya    0 Jun  9 08:31 example.txt
+-rwxr-xr-x 1 bhagya bhagya    0 Jun  9 09:53 myfile.txt
+-rw-r--r-- 1 bhagya bhagya    0 Jun  9 10:00 renamed_file.txt
+-rw-r--r-- 1 bhagya bhagya    0 Jun  9 09:15 test.txt
