@@ -163,3 +163,52 @@ Unpacking objects: 100% (18/18), 6.30 KiB | 179.00 KiB/s, done.
 From https://github.com/BhagyadaWagh/Celebal-Technologies
  * branch            main       -> FETCH_HEAD
  * [new branch]      main       -> origin/main
+
+TASK 6 :
+bhagya@Tanishka2020:~$ mkdir -p ~/git-remote/myproject.git
+bhagya@Tanishka2020:~$ cd ~/git-remote/myproject.git
+bhagya@Tanishka2020:~/git-remote/myproject.git$ git init --bare
+hint: Using 'master' as the name for the initial branch. This default branch name
+hint: is subject to change. To configure the initial branch name to use in all
+hint: of your new repositories, which will suppress this warning, call:
+hint:
+hint:   git config --global init.defaultBranch <name>
+hint:
+hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+hint: 'development'. The just-created branch can be renamed via this command:
+hint:
+hint:   git branch -m <name>
+Initialized empty Git repository in /home/bhagya/git-remote/myproject.git/
+bhagya@Tanishka2020:~/git-remote/myproject.git$ cd ..
+bhagya@Tanishka2020:~/git-remote$ cd ..
+bhagya@Tanishka2020:~$ mkdir -p ~/my-local-project
+bhagya@Tanishka2020:~$ cd ~/my-local-project
+bhagya@Tanishka2020:~/my-local-project$ git init
+hint: Using 'master' as the name for the initial branch. This default branch name
+hint: is subject to change. To configure the initial branch name to use in all
+hint: of your new repositories, which will suppress this warning, call:
+hint:
+hint:   git config --global init.defaultBranch <name>
+hint:
+hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+hint: 'development'. The just-created branch can be renamed via this command:
+hint:
+hint:   git branch -m <name>
+Initialized empty Git repository in /home/bhagya/my-local-project/.git/
+bhagya@Tanishka2020:~/my-local-project$ echo "Hello Local Git!" > hello.txt
+bhagya@Tanishka2020:~/my-local-project$ git add hello.txt
+bhagya@Tanishka2020:~/my-local-project$ git commit -m "Initial commit"
+[master (root-commit) 19f23dd] Initial commit
+ 1 file changed, 1 insertion(+)
+ create mode 100644 hello.txt
+bhagya@Tanishka2020:~/my-local-project$ git remote add origin ~/git-remote/myproject.git
+bhagya@Tanishka2020:~/my-local-project$ git branch -M master
+bhagya@Tanishka2020:~/my-local-project$ git push origin master
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 232 bytes | 232.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To /home/bhagya/git-remote/myproject.git
+ * [new branch]      master -> master
+
+
